@@ -7,6 +7,7 @@ import Plane from './components/Plane';
 import Sky from './components/Sky';
 
 export default class App extends Component {
+
   render () {
     return (
       <Scene>
