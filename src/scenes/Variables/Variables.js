@@ -14,8 +14,8 @@ const Variables = () => {
     <Scene>
       {/* Asset management system */}
       <a-assets>
-        <a-asset-item id="robotObj" src="./voxels/robot/robot.obj"></a-asset-item>
-        <a-asset-item id="robotMtl" src="./voxels/robot/robot.mtl"></a-asset-item>
+        <a-asset-item id="robotObj" src="./assets/voxels/robot/robot.obj"></a-asset-item>
+        <a-asset-item id="robotMtl" src="./assets/voxels/robot/robot.mtl"></a-asset-item>
       </a-assets>
 
       {/* Scene entities */}

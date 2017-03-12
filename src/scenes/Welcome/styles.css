@@ -1,0 +1,77 @@
+/**
+ * Welcome Scene Styles
+ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.site-title {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.title-banner {
+  max-width: 90%;
+  width: 900px;
+}
+
+/* Content */
+
+.site-content {
+  flex: 1 0 auto;
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.bob-2d-rendering {
+  display: block;
+  margin: 3rem auto;
+  max-width: 33%;
+  width: 220px;
+}
+
+.site-content section {
+  margin-bottom: 3rem;
+}
+
+.site-content section h2 {
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Footer */
+
+.site-footer:before {
+  background-color: #3ac833;
+  border-top: .5rem solid #36bb30;
+  content: '';
+  display: block;
+  height: 1rem;
+}
+
+.site-footer {
+  background-color: #703e16;
+  color: white;
+  font-size: .8rem;
+  line-height: 1;
+}
+
+.colophon {
+  padding: 1rem;
+}
+
+.colophon p {
+  margin-bottom: 0;
+}
