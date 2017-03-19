@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import './styles.css';
 import title from '../../../public/assets/images/title.png';
@@ -36,8 +36,6 @@ const Welcome = () => {
   );
 };
 
-Welcome.propTypes = {
-
-};
+// Welcome.propTypes = {};
 
 export default Welcome;

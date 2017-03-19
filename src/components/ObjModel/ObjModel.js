@@ -1,13 +1,16 @@
 import React, { PropTypes } from 'react';
 import { Entity } from 'aframe-react';
 
-const ObjModel = ({ obj, mtl, scale, position }) => {
+const ObjModel = (props) => {
   return (
     <Entity 
-      obj-model={`obj: ${obj}; mtl: ${mtl}`}
-      position={position}
-      scale={scale}
-    />
+      obj-model={`obj: ${props.obj}; mtl: ${props.mtl}`}
+      position={props.position}
+      rotation={props.rotation}
+      scale={props.scale}
+    >
+      {props.children}
+    </Entity>
   );
 };
 
@@ -17,9 +20,11 @@ ObjModel.defaultProps = {
 };
 
 ObjModel.propTypes = {
+  children: PropTypes.node,
   mtl: PropTypes.string.isRequired,
   obj: PropTypes.string.isRequired,
   position: PropTypes.array,
+  rotation: PropTypes.array,
   scale: PropTypes.array
 };
 

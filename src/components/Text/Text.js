@@ -1,29 +1,30 @@
+/* global AFRAME */
 import React, { PropTypes } from 'react';
 import { Entity } from 'aframe-react';
 
-const Text = ({ color, font, position, value, width }) => {
+const Text = (props) => {
+  const extraProps = AFRAME.utils.extend({}, props);
+  delete extraProps.color;
+  delete extraProps.text;
+
   return (
-    <Entity 
-      text={{ value, color, font, width }} 
-      position={position} 
-    />
+    <Entity
+      text={props.text} material={{color: props.color}}
+      {...extraProps}
+    >
+      {props.children}
+    </Entity>
   );
 };
 
 Text.defaultProps = {
-  color: 'black',
-  font: 'sourcecodepro',
-  position: [2.1, 2, -5],
-  value: '',
-  width: 6
+  color: ''
 };
 
 Text.propTypes = {
+  children: PropTypes.node,
   color: PropTypes.string,
-  font: PropTypes.string,
-  position: PropTypes.array,
-  value: PropTypes.string,
-  width: PropTypes.number
+  text: PropTypes.object
 };
 
 export default Text;

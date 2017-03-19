@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Entity } from 'aframe-react';
 
-const Sky = ({ color }) => {
+import { colors } from '../../styles/theme';
+
+const Sky = (props) => {
   return (
     <Entity 
       geometry={{
@@ -9,7 +11,7 @@ const Sky = ({ color }) => {
         radius: 100,
       }} 
       material={{
-        color, 
+        color: props.color, 
         shader: 'flat'
       }} 
       scale={[1, 1, -1]}
@@ -18,8 +20,7 @@ const Sky = ({ color }) => {
 };
 
 Sky.defaultProps = {
-  // color: '#77e3ff', DARKER
-  color: '#ace7fa'
+  color: colors.skyBlue
 };
 
 Sky.propTypes = {

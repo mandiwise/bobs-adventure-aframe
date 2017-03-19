@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 import Welcome from './Welcome';
 
 import '../../styles/shared.css';
 
 class WelcomeContainer extends Component {
+
+  // static propTypes = {};
 
   render() {
     return (
@@ -13,9 +15,5 @@ class WelcomeContainer extends Component {
   }
 
 }
-
-WelcomeContainer.propTypes = {
-
-};
 
 export default WelcomeContainer;
