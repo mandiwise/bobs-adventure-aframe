@@ -4,8 +4,8 @@ import { Router, Route } from 'react-router';
 
 import { store, history } from './redux/store';
 
-import Welcome from './scenes/Welcome';
-import Variables from './scenes/Variables';
+import Welcome from './containers/Welcome';
+import Variables from './containers/Variables';
 
 export default class App extends Component {
 

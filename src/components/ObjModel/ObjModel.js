@@ -8,6 +8,7 @@ const ObjModel = (props) => {
       position={props.position}
       rotation={props.rotation}
       scale={props.scale}
+      {...props}
     >
       {props.children}
     </Entity>
@@ -16,6 +17,7 @@ const ObjModel = (props) => {
 
 ObjModel.defaultProps = {
   position: [0, 0, -5],
+  rotation: [0, 0, 0],
   scale: [1, 1, 1]
 };
 
