@@ -1,29 +1,32 @@
 import React from 'react';
 
 import './styles.css';
-import title from '../../../public/assets/images/title.png';
-import bob from '../../../public/assets/images/bob.png';
+import images from '../../config/images';
 
 const Welcome = () => {
   return (
     <div className="container">
       <header id="masthead" className="site-title">
-        <img src={title} className="title-banner" alt="Bob's Amazing Programming Adventure banner" />
+        <div className="title-banner">
+          <img src={images.title} alt="Bob's Amazing Programming Adventure banner" />
+        </div>
       </header>
       <div className="site-content">
         <section id="introduction">
-          <img src={bob} className="bob-2d-rendering" alt="Bob is a little grey voxel robot with bright yellow eyes" />
-        <p>Applications such a cross-platform runtime environment for information such as PDF documents, site-specific browsers, and desktop applications using JS, HTML. Sails is a JavaScript 1.</p>
-        <p>The name is prototype-based with incomplete direct support for, it changes in other domains. Design Patterns is to specify the browser-compatibility specific code linter.</p>
-        <p>QUnit is Google’s open source JavaScript unit testing framework to use of creating user interfaces with Node JS is an API that moves function calls by calling one parameter. V8. Npm is a JavaScript code translator transpiler.</p>
-        <p>Babel is a practical functional programming. PhantomJS is said to add client-side behavior to create and it is a library. Currying is said to ease React Native development files from development.</p>
+          <img src={images.bob} className="bob-2d-rendering" alt="Rendering of Bob, a little grey voxel robot with bright yellow eyes" />
+          <p>This is Bob the Robot. He has problem, but you can help him solve it.</p>
+          <p>Bob's best dog pal Megabyte has run off. Megabyte does that sometimes when he finds a juicy bone and wants to hide it away somewhere for later. When this happens Bob usually has a hard time finding Megabyte because he doesn't have a program in his robot brain to help with this.</p>
+          <img src={images.megabyte} className="mb-2d-rendering" alt="Megabyte of Megabyte, Bob's dog friend" />
+          <p>Luckily, Bob's brain runs on JavaScript. You can help Bob find Megabyte by learning a bit of JavaScript and then creating a program to help him look for and find Megabyte.</p>
+          <p>You'll have to learn about variables, data structures, function, conditional statements, and loops to help Bob. By solving the challenges in each of the levels, you'll create a new program step-by-step using JavaScript that Bob can use to find Megabyte now, or any other time his dog pal runs off again in the future!</p>
         </section>
         <section id="instructions">
           <h2>Instructions</h2>
-          <p>QUnit is Google’s open source JavaScript unit testing framework to use of creating user interfaces with Node JS is an API that moves function calls by calling one parameter. V8. Npm is a JavaScript code translator transpiler.</p>
-          <p>Babel is a practical functional programming. PhantomJS is said to add client-side behavior to create and it is a library. Currying is said to ease React Native development files from development.</p>
+          <p>Some info about how to use the game...like voice controls...</p>
           <div className="cta">
-            <a href="#" className="button-link">Play Now!</a>
+            <a href="#">
+              <img src={images.startButton} className="start-button" alt="Pixelated button that says start on it" />
+            </a>
           </div>
         </section>
       </div>

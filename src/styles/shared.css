@@ -90,7 +90,6 @@ input {
 }
 
 body {
-  /*background: linear-gradient(#17e0ff, #15cdea) no-repeat fixed;*/
   background: #ace7fa;
 }
 
@@ -113,26 +112,4 @@ h2 {
 
 p {
   margin-bottom: 1rem;
-}
-
-/* Forms */
-/*-----------------------------------------*/
-
-.button-link {
-  background-color: #da2c17;
-  color: white;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: .75rem 2rem .5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 300ms linear;
-}
-
-.button-link:hover {
-  background-color: #c22816;
-  cursor: pointer;
-  text-decoration: none;
 }
