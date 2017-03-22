@@ -4,19 +4,21 @@ import { Scene } from 'aframe-react';
 import Sky from '../../components/Sky';
 import ObjModel from '../../components/ObjModel';
 
+const voxelsDir = `${process.env.PUBLIC_URL}/assets/voxels`;
+
 const Outdoors = (props) => {
   return (
     <Scene>
       {/* Asset management system */}
       <a-assets>
-        <a-asset-item id="cloud_1_obj" src="./assets/voxels/cloud_1/cloud_1.obj"></a-asset-item>
-        <a-asset-item id="cloud_1_mtl" src="./assets/voxels/cloud_1/cloud_1.mtl"></a-asset-item>
-        <a-asset-item id="cloud_2_obj" src="./assets/voxels/cloud_2/cloud_2.obj"></a-asset-item>
-        <a-asset-item id="cloud_2_mtl" src="./assets/voxels/cloud_2/cloud_2.mtl"></a-asset-item>
-        <a-asset-item id="cloud_3_obj" src="./assets/voxels/cloud_3/cloud_3.obj"></a-asset-item>
-        <a-asset-item id="cloud_3_mtl" src="./assets/voxels/cloud_3/cloud_3.mtl"></a-asset-item>
-        <a-asset-item id="outdoor_scene_obj" src="./assets/voxels/outdoor_scene/outdoor_scene.obj"></a-asset-item>
-        <a-asset-item id="outdoor_scene_mtl" src="./assets/voxels/outdoor_scene/outdoor_scene.mtl"></a-asset-item>
+        <a-asset-item id="cloud_1_obj" src={`${voxelsDir}/cloud_1/cloud_1.obj`}></a-asset-item>
+        <a-asset-item id="cloud_1_mtl" src={`${voxelsDir}/cloud_1/cloud_1.mtl`}></a-asset-item>
+        <a-asset-item id="cloud_2_obj" src={`${voxelsDir}/cloud_2/cloud_2.obj`}></a-asset-item>
+        <a-asset-item id="cloud_2_mtl" src={`${voxelsDir}/cloud_2/cloud_2.mtl`}></a-asset-item>
+        <a-asset-item id="cloud_3_obj" src={`${voxelsDir}/cloud_3/cloud_3.obj`}></a-asset-item>
+        <a-asset-item id="cloud_3_mtl" src={`${voxelsDir}/cloud_3/cloud_3.mtl`}></a-asset-item>
+        <a-asset-item id="outdoor_scene_obj" src={`${voxelsDir}/outdoor_scene/outdoor_scene.obj`}></a-asset-item>
+        <a-asset-item id="outdoor_scene_mtl" src={`${voxelsDir}/outdoor_scene/outdoor_scene.mtl`}></a-asset-item>
       </a-assets>
 
       {/* Scene entities */}
@@ -84,7 +86,7 @@ const Outdoors = (props) => {
       <ObjModel
         obj="#outdoor_scene_obj"
         mtl="#outdoor_scene_mtl"
-        position={[0, -2, 0]}
+        position={[0, -1.2, 0]}
         scale={[.3, .3, .3]}
       />
     </Scene>

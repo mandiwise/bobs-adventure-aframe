@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import './styles.css';
 import images from '../../config/images';
@@ -24,9 +25,9 @@ const Welcome = () => {
           <h2>Instructions</h2>
           <p>Some info about how to use the game...like voice controls...</p>
           <div className="cta">
-            <a href="#">
+            <Link to="/enter">
               <img src={images.startButton} className="start-button" alt="Pixelated button that says start on it" />
-            </a>
+            </Link>
           </div>
         </section>
       </div>

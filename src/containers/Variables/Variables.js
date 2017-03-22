@@ -6,12 +6,14 @@ import extras from 'aframe-extras';
 AFRAME.registerComponent('touch-controls', extras.controls['touch-controls']);
 
 import OutdoorScene from '../../scenes/Outdoors';
-import Camera from '../../components/Camera';
+import LessonCamera from '../../components/LessonCamera';
 import Plane from '../../components/Plane';
 import Text from '../../components/Text';
 import ObjModel from '../../components/ObjModel';
 import Console from '../../components/Console';
 import ConsolePanel from '../../components/ConsolePanel';
+
+const voxelsDir = `${process.env.PUBLIC_URL}/assets/voxels`;
 
 const Variables = ({ activePanel, goToNextPanel, goToPreviousPanel }) => {
   return (
@@ -19,29 +21,19 @@ const Variables = ({ activePanel, goToNextPanel, goToPreviousPanel }) => {
       {/* Asset management system */}
       <a-assets>
         {/* assets */}
-        <a-asset-item id="robot_obj" src="./assets/voxels/robot/robot.obj"></a-asset-item>
-        <a-asset-item id="robot_mtl" src="./assets/voxels/robot/robot.mtl"></a-asset-item>
-        <a-asset-item id="macintosh_obj" src="./assets/voxels/macintosh/macintosh.obj"></a-asset-item>
-        <a-asset-item id="macintosh_mtl" src="./assets/voxels/macintosh/macintosh.mtl"></a-asset-item>
-        <a-asset-item id="mb_photo_obj" src="./assets/voxels/mb_photo/mb_photo.obj"></a-asset-item>
-        <a-asset-item id="mb_photo_mtl" src="./assets/voxels/mb_photo/mb_photo.mtl"></a-asset-item>
+        <a-asset-item id="robot_obj" src={`${voxelsDir}/robot/robot.obj`}></a-asset-item>
+        <a-asset-item id="robot_mtl" src={`${voxelsDir}/robot/robot.mtl`}></a-asset-item>
+        <a-asset-item id="macintosh_obj" src={`${voxelsDir}/macintosh/macintosh.obj`}></a-asset-item>
+        <a-asset-item id="macintosh_mtl" src={`${voxelsDir}/macintosh/macintosh.mtl`}></a-asset-item>
+        <a-asset-item id="mb_photo_obj" src={`${voxelsDir}/mb_photo/mb_photo.obj`}></a-asset-item>
+        <a-asset-item id="mb_photo_mtl" src={`${voxelsDir}/mb_photo/mb_photo.mtl`}></a-asset-item>
         {/* mixins */}
         <a-mixin id="console_text" text="font: sourcecodepro; color: white; width: 6; wrapCount: 40"></a-mixin>
       </a-assets>
 
       {/* Camera */}
       <Entity position={[0, 1.6, 1]}>
-        <Camera touch-controls="">
-          <Entity
-            position="0 0 -3"
-            geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.04;"
-            material="color: magenta; shader: flat"
-            cursor="fuse: false"
-          >
-            <a-animation begin="click" easing="ease-in" attribute="scale"
-              fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="200"></a-animation>
-          </Entity>
-        </Camera>
+        <LessonCamera />
       </Entity>
 
       {/* Console */}
@@ -159,7 +151,7 @@ const Variables = ({ activePanel, goToNextPanel, goToPreviousPanel }) => {
         mtl="#robot_mtl"
         position={[-5, 0, -5]}
         rotation={[0, 60, 0]}
-        scale={[.15, .15, .15,]}
+        scale={[.15, .15, .15]}
       />
       <Entity 
         geometry={{primitive: 'box', depth: 1, height: 0.1, width: 1}} 
@@ -171,14 +163,14 @@ const Variables = ({ activePanel, goToNextPanel, goToPreviousPanel }) => {
         mtl="#mb_photo_mtl"
         position={[5, 0, 7]}
         rotation={[0, -135, 0]}
-        scale={[.15, .15, .15,]}
+        scale={[.15, .15, .15]}
       />
       <ObjModel
         obj="#macintosh_obj"
         mtl="#macintosh_mtl"
         position={[-5, 0, 7]}
         rotation={[0, -215, 0]}
-        scale={[.15, .15, .15,]}
+        scale={[.15, .15, .15]}
       />
     </OutdoorScene>
   );

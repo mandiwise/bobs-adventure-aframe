@@ -5,7 +5,6 @@ import Welcome from './Welcome';
 import '../../styles/shared.css';
 
 class WelcomeContainer extends Component {
-
   // static propTypes = {};
 
   componentDidMount() {
@@ -20,7 +19,7 @@ class WelcomeContainer extends Component {
   }
 
   scrollToContent(height) {
-    const scrollOnTick = setTimeout(() => {
+    setTimeout(() => {
       let pageYOffset = window.pageYOffset;
       if ( pageYOffset >= height ) return;
       window.scrollBy(0, 10);

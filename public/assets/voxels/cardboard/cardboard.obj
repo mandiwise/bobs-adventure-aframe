@@ -1,7 +1,7 @@
 # This file was created with Minddesk Qubicle 3.0
 # Get Qubicle at www.getqubicle.com
 
-mtllib carboard.mtl
+mtllib cardboard.mtl
 
 vn 0.0 0.0 1.0
 vn 0.0 0.0 -1.0
@@ -2189,7 +2189,7 @@ vt 0.12500 0.50000
 vt 0.12500 0.62500
 
 g Matrix
-usemtl carboard_Material
+usemtl cardboard_Material
 f 1/1/3 2/2/3 3/3/3 4/4/3
 f 3/1/6 2/2/6 5/3/6 6/4/6
 f 7/1/2 5/2/2 2/3/2 1/4/2
