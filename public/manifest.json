@@ -1,0 +1,6 @@
+{
+  "short_name": "Bob's Adventure",
+  "name": "Bob's Amazing Programming Adventure",
+  "start_url": "/index.html",
+  "display": "fullscreen"
+}
