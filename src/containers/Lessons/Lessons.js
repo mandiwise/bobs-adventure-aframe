@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Entity } from 'aframe-react';
 
 import OutdoorScene from '../../scenes/Outdoors';
@@ -74,6 +74,8 @@ const Lessons = ({goToLesson}) => {
   );
 };
 
-// Lessons.propTypes = {};
+Lessons.propTypes = {
+  goToLesson: PropTypes.func.isRequired
+};
 
 export default Lessons;
