@@ -77,7 +77,7 @@ table {
 }
 
 html {
-   font-size: 20px;
+   font-size: 16px;
 }
 
 body,
@@ -112,4 +112,13 @@ h2 {
 
 p {
   margin-bottom: 1rem;
+}
+
+/* Media Queries */
+/*-----------------------------------------*/
+
+@media screen and (min-width: 600px) {
+  html {
+   font-size: 20px;
+  }
 }
