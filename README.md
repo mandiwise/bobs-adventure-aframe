@@ -1,6 +1,6 @@
 # Bob's Amazing Programming Adventure
 
-A little experiment to test the plausibility of learning programming fundamentals in the context of a VR game, with help from the following:
+A little experiment to test the plausibility of learning programming fundamentals in the context of a cardboard-based VR game, with help from the following:
 
 - [aframe](https://github.com/aframevr/aframe)
 - [aframe-extras](https://github.com/donmccurdy/aframe-extras)
