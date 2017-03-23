@@ -3,7 +3,10 @@ import { Entity } from 'aframe-react';
 
 const Console = (props) => {
   return (
-    <Entity rotation={props.rotation} onClick={props.goToNextPanel}>
+    <Entity 
+      rotation={props.rotation} 
+      onClick={props.goToNextPanel}
+    >
       {props.children}
     </Entity>
   );

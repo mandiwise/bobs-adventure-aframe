@@ -21,7 +21,7 @@ const Enter = ({ goToMenu }) => {
       <Entity position={[0, 1.5, 0]}>
         <Entity camera="" look-controls="" wasd-controls="" touch-controls="">
           <Entity
-            position="0 0 -3"
+            position="0 -.75 -3"
             geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.04;"
             material="color: magenta; shader: flat"
             cursor="fuse: false"
